@@ -12,6 +12,7 @@ describe('API protocol practice', () => {
 
   test('It should make a request to the discover endpoint', async () => {
     const result = await discoverMovie()
+    console.log('result', result);
     expect(result).toHaveProperty('data.results')
     expect(result).toHaveProperty('status')
     expect(result).toHaveProperty('headers')
